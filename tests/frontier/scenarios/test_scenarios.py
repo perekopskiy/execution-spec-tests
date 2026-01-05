@@ -209,7 +209,7 @@ def test_scenarios(
             gasprice=tx_gasprice,
             timestamp=tx_env.timestamp,  # we can't know timestamp before head, use gas hash
             number=len(blocks) + 1,
-            gaslimit=5000000,
+            gaslimit=50000000,
             coinbase=tx_env.fee_recipient,
         )
 
@@ -235,7 +235,7 @@ def test_scenarios(
 
         tx = Transaction(
             sender=tx_origin,
-            gas_limit=5000000,
+            gas_limit=50000000,
             gas_price=tx_gasprice,
             to=runner_contract,
             data=bytes.fromhex("11223344"),
